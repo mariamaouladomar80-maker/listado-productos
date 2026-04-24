@@ -14,7 +14,7 @@ export default function TarjetaProducto({ productoData }) {
                 width="85"
                 height={100}
             />
-             <Boton className=""/>
+             <Boton/>
             </div>
            
         </div>
