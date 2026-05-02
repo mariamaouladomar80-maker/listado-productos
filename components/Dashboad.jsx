@@ -8,7 +8,7 @@ export default async function Dashboad() {
             {
                 results.map( p => <TarjetaProducto  key={p.id} productoData={p}/> )
             }
-           
+          
         </div>
     )
 }

@@ -34,3 +34,41 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+
+PASO 1: Crear route handler
+let datos = [];
+
+export async function GET() {
+  return Response.json(datos);
+}
+
+export async function POST(req) {
+  const nuevo = await req.json();
+  datos.push(nuevo);
+  return Response.json(datos);
+}
+
+ PASO 2: Cliente
+ useEffect(() => {
+  fetch('/api/...')
+}, []);
+
+paso 3 : 
+fetch('/api/...', {
+  method: 'POST',
+  body: JSON.stringify(...)
+})
+
+
+paso 4 : 
+map(...)
+
+
+Resumen => 
+
+👉 Route Handler = backend
+👉 fetch = comunicación
+👉 GET = leer
+👉 POST = escribir
